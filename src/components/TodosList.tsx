@@ -1,23 +1,23 @@
-import React, { useMemo } from "react";
-import TodoItem from "./TodoItem";
-import { useFilter, useTodos, useIsLoading } from "../store/todo";
-import TodoSkeleton from "./TodoSkeleton";
+import React, { useMemo } from "react"
+import TodoItem from "./TodoItem"
+import { useFilter, useTodos, useIsLoading } from "../store/todo"
+import TodoSkeleton from "./TodoSkeleton"
 
 const TodosList = React.memo(() => {
-  const todos = useTodos();
-  const filter = useFilter();
-  const isLoading = useIsLoading();
+  const todos = useTodos()
+  const filter = useFilter()
+  const isLoading = useIsLoading()
 
   const filteredTodos = useMemo(() => {
     switch (filter) {
       case "completed":
-        return todos.filter((todo) => todo.completed);
+        return todos.filter((todo) => todo.completed)
       case "active":
-        return todos.filter((todo) => !todo.completed);
+        return todos.filter((todo) => !todo.completed)
       default:
-        return todos;
+        return todos
     }
-  }, [todos, filter]);
+  }, [todos, filter])
 
   return (
     <section>
@@ -34,7 +34,7 @@ const TodosList = React.memo(() => {
         </ul>
       )}
     </section>
-  );
-});
+  )
+})
 
-export default TodosList;
+export default TodosList
