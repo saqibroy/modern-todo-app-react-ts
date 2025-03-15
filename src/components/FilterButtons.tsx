@@ -1,13 +1,13 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 import {Filter} from '../types/types'
 import FilterButton from './FilterButton'
-import { useFilter, useTodos } from '../store/todo';
+import { useFilter, useTodos } from '../store/todo'
 
 const FilterButtons = React.memo(() => {
     const todos = useTodos()
     const filter = useFilter()
-    const activeCount = useMemo(() => todos.filter((todo) => !todo.completed).length, [todos]);
-    const completedCount = useMemo(() => todos.filter((todo) => todo.completed).length, [todos]);
+    const activeCount = useMemo(() => todos.filter((todo) => !todo.completed).length, [todos])
+    const completedCount = useMemo(() => todos.length - activeCount, [todos])
   
     const filterOptions = [
       { label: 'All', value: Filter.All, count: todos.length },

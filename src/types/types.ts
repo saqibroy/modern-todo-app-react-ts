@@ -28,7 +28,6 @@ export interface FilterButtonProps {
     filter: Filter
 }
 
-
 export type TodoStore = {
     todos: Todo[],
     filter: Filter,
