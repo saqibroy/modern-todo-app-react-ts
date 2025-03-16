@@ -1,6 +1,7 @@
 import { useEffect, lazy, Suspense  } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { onCLS, onINP, onLCP } from 'web-vitals'
+import { Analytics } from '@vercel/analytics/react';
 
 import Header from './Header'
 import FilterButtons from './FilterButtons'
@@ -87,6 +88,7 @@ function App() {
           </footer>
         </div>
       </main>
+      <Analytics />
     </>
   )
 }
