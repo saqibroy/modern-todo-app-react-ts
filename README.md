@@ -35,6 +35,10 @@ A cutting-edge Todo application demonstrating modern web development best practi
 - **📲 PWA Ready** - Offline capabilities (WIP)
 - **📈 Analytics Integration** - Web Vitals monitoring
 
+## 📡 API Integration
+
+This application uses the REST API from the [saqibroy/todo-app-api](https://github.com/saqibroy/todo-app-api) repository, which is hosted and served on [Railways](https://railway.app). The API handles all backend operations, including CRUD operations for todos, authentication, and data persistence.
+
 ## 🛠 Tech Stack
 
 | Category          | Technologies                                                                 |
