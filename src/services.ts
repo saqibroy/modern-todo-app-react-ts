@@ -1,7 +1,7 @@
 import { ZodError } from "zod";
 import { ApiError, ApiResponse, Todo, TodoCreateDTO, TodoCreateSchema, TodoSchema } from "./schemas/todo";
 
-const API_BASE = 'https://todo-app-api-4r8q.onrender.com/';
+const API_BASE = 'https://todo-app-api-4r8q.onrender.com';
 
 export const handleResponse = async <T>(response: Response): Promise<ApiResponse<T>> => {
   if(!response.ok) {
